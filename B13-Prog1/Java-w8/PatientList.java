@@ -18,12 +18,12 @@ public class PatientList {
     }
 
     public AgeMetrics getAgeMetrics() {
-        
         for (Patient element : patients) {
-            AgeMetrics patient = new AgeMetrics();
+            AgeMetrics patientMetrics = new AgeMetrics();
+            patientMetrics.addAge(element.getAge());
         }
         
-        return null;
+        return patientMetrics;
     }
 
     public PatientList filterByStatus(char status) {
