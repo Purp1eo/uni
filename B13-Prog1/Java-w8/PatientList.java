@@ -18,7 +18,7 @@ public class PatientList {
     }
 
     public AgeMetrics getAgeMetrics() {
-        AgeMetrics patientMetrics= new AgeMetrics();
+        AgeMetrics patientMetrics = new AgeMetrics();
         
         for (Patient element : patients) {
             patientMetrics.addAge(element.getAge());
@@ -28,6 +28,12 @@ public class PatientList {
     }
 
     public PatientList filterByStatus(char status) {
-        return null;
+        PatientList filteredPatients = new PatientList();
+
+        for (Patient element : patients) {
+            if (element.getStatus() == status) filteredPatients.addPatient(element);
+        }
+        
+        return filteredPatients;
     }
 }

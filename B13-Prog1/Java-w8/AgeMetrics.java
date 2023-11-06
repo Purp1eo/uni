@@ -2,14 +2,14 @@ public class AgeMetrics {
 
     private double minAge;
     private double maxAge;
-    private double totalAge;
+    private double sumAges;
     private double avgAge;
     private int numAges;
 
     AgeMetrics() {        
-        minAge = 0.0;
-        maxAge = 0.0;
-        totalAge = 0.0;
+        minAge = 1.0;
+        maxAge = 1.0;
+        sumAges = 0.0;
         avgAge = 0.0;
         numAges = 0;
     }
@@ -17,8 +17,9 @@ public class AgeMetrics {
     public void addAge(double age) {
         if (age < minAge) minAge = age;
         if (age > maxAge) maxAge = age;
-        totalAge += age;
+        sumAges += age;
         numAges++;
+        avgAge = sumAges / numAges;
     }
 
     public double getMinAge() {
@@ -30,7 +31,6 @@ public class AgeMetrics {
     }
 
     public double getAverageAge() {
-        avgAge = totalAge / numAges;
         return avgAge;
     }
 
@@ -40,7 +40,9 @@ public class AgeMetrics {
     }
 
     public String toString() {
-        String metricString = "Min: " + minAge + ", Max: " + maxAge + ", Mean: " + avgAge;
+        String avgAgeRounded = String.format("%.2f", avgAge);
+
+        String metricString = "Min: " + (int)minAge + ", Max: " + (int)maxAge + ", Mean: " + avgAgeRounded;
         return metricString;
     }
 }
