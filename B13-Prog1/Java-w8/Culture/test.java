@@ -11,7 +11,7 @@ public class test {
         2000, 6000, 800, 1000, 1500, 1000, 1500, 500, 1500, 1500, 1500, 8000, 3000, 8000, 2500, 5000, 1500, 5000, 10000, 
         2000, 1500, 3500, 1500, 2500, 2500, 2500}; 
 
-/////////////////////////////////////////////////////////// creates a ArtObjectList object (array filled with ArtObject objects) from stati and prices
+/////////////////////////////////////////////////////////// creates an ArtObjectList object (array filled with ArtObject objects) from stati and prices
         List<ArtObject> bilderList = new ArrayList<>();
 
         for (int i = 0; i < stati.length; i++) {
@@ -30,7 +30,7 @@ public class test {
             bilder.addArtObject(bilderArray[i]);
         }
 
-/////////////////////////////////////////////////////////// takes bilder (ArtObjectList object) and splits it in two (split by status: 'r', 'd'), 
+/////////////////////////////////////////////////////////// takes bilder (ArtObjectList object) and splits it in two (split by status: 's', 'u'), 
 /////////////////////////////////////////////////////////// instantiates two PriceMetrics objects, prints them to console (stringified)
         ArtObjectList verkaufteBilder = bilder.filterByStatus('r');
         PriceMetrics verkaufteBilderMetrics = verkaufteBilder.getPriceMetrics();
