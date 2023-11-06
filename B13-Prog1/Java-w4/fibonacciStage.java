@@ -4,12 +4,12 @@ public class fibonacciStage {
         if (f < 1) return a;
 
         for(int i = 1; i<f; i++) {
-            if (((long)a + (long)b) > Integer.MAX_VALUE) {
-                return -1;
-            }
             c = a + b;
             a = b;
             b = c;
+            if (c < 0) {
+                return -1;
+            }
         }
         return c;
     }
