@@ -18,6 +18,11 @@ public class PatientList {
     }
 
     public AgeMetrics getAgeMetrics() {
+        
+        for (Patient element : patients) {
+            AgeMetrics patient = new AgeMetrics();
+        }
+        
         return null;
     }
 
