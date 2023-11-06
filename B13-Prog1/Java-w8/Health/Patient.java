@@ -1,7 +1,7 @@
 public class Patient {
 
-    char status;
-    double age;
+    private char status;
+    private double age;
 
     Patient(char status, double age) {
         this.status = status;
