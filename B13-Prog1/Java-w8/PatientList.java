@@ -18,12 +18,7 @@ public class PatientList {
     }
 
     public AgeMetrics getAgeMetrics() {
-        
-        AgeMetrics data = new AgeMetrics();
-
-
-        
-        return data;
+        return null;
     }
 
     public PatientList filterByStatus(char status) {
