@@ -7,8 +7,8 @@ public class AgeMetrics {
     private int numAges;
 
     AgeMetrics() {        
-        minAge = Double.POSITIVE_INFINITY;
-        maxAge = Double.NEGATIVE_INFINITY;
+        minAge = 0.0;
+        maxAge = 0.0;
         totalAge = 0.0;
         avgAge = 0.0;
         numAges = 0;
