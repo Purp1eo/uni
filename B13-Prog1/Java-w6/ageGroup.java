@@ -23,7 +23,7 @@ public class ageGroup {
         double[] recAges = selection.select(ages, recIndex);
         double[] decAges = selection.select(ages, decIndex);
 
-        // third >> calculation (use the metrics on both arrays, recovered patients and deceased ones)
+        // third >> calculation (use metrics on both arrays, recovered patients and deceased ones)
             // (and round the mean :D)
 
         double[] recMetrics = calculation.metrics(recAges);
