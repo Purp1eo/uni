@@ -16,7 +16,7 @@ public class calculation {
         result[2] = sum/values.length;
 
         return result;
-    } 
+    }
     
     public static void main(String[] args) {
         double[] doubleArray = {3.14, 4.669, 2.718, 0.577, 1.89};
