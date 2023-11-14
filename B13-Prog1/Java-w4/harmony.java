@@ -10,28 +10,17 @@ public class harmony {
     }
 
     public static void printHarmonicSeriesFormula(int n) {
-        //StringBuilder fractions = new StringBuilder("1");
-        //
-        //if (n <= 0) {}
-        //else if (n == 1) System.out.println(fractions);
-        //else {
-        //    for(int i = 2; i <= n; i++) {
-        //        fractions.append(" + (1/").append(i).append(")");
-        //        if (i % 10 == 0) fractions.append("\n");
-        //    }
-        //    fractions.append(" = ").append(getHarmonicSeriesAt(n));
-        //    System.out.println(fractions);
-        //}
-
+        StringBuilder fractions = new StringBuilder("1");
+        
         if (n <= 0) {}
-        else if (n == 1) System.out.println("1");
+        else if (n == 1) System.out.println(fractions);
         else {
-            System.out.print("1 ");
-            for (int i = 2; i <= n; i++) {
-                System.out.print("+ (1/"+ i + ") ");
-                if (i % 10 == 0) System.out.print("\n");
+            for(int i = 2; i <= n; i++) {
+                fractions.append(" + (1/").append(i).append(")");
+                if (i % 10 == 0) fractions.append("\n");
             }
-            System.out.println("= " + getHarmonicSeriesAt(n));
+            fractions.append(" = ").append(getHarmonicSeriesAt(n));
+            System.out.println(fractions);
         }
     }
 
