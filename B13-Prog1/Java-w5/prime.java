@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class prime {
     public static boolean isPrime(int val) {
         if (val <= 1) return false;
@@ -18,16 +16,9 @@ public class prime {
     }
 
     public static void main(String[] args) {
-        try (Scanner myInput = new Scanner(System.in)) {
-            int num;
-            System.out.println("Enter a number to check for prime: ");
-            num = myInput.nextInt();
-            
-            System.out.println("\n" + num + " is a prime number: " + isPrime(num));
+        for (int i = 0; i < 300; i++) {
+            System.out.println(i + " is prime: " + isPrime(i));
         }
-        /* for (int i = 0; i < 300; i++) {
-            System.out.println(isPrime(i));
-        } */
     }
 }
 

@@ -18,12 +18,15 @@ public class week5 {
     }
     public static int countPrimes(int from, int to) {
         int counter = 0;
-        for(int i = from; from <= to; from++) {
+        for(int i = from; i <= to; i++) {
             if (isPrime(i)) counter++;
         }
         return counter;
     }
     public static void main(String[] args) {
-        
+        for (int i = 0; i < 300; i++) {
+            //System.out.println(i + " is a prime number: " + isPrime(i));
+            System.out.println(countPrimes(0, i));
+        }
     }
 }
