@@ -25,6 +25,6 @@ public class harmony {
     }
 
     public static void main(String[] args) {
-            printHarmonicSeriesFormula(13);            
+            printHarmonicSeriesFormula(13);
     }
 }
