@@ -1,24 +1,41 @@
 public class harmony {
-    static double getHarmonicSeriesAt(int n) {
-        double sum = 1;
+    public static double getHarmonicSeriesAt(int n) {
+        if (n <= 0) return 0.0;
+
+        double sum = 0;
         for(int i = 1; i <= n; i++) {
             sum += 1.0/i;
         }
-        return sum-1;
+        return sum;
     }
 
-    static String printHarmonicSeriesFormula(int n) {
-        StringBuilder fractions = new StringBuilder("1");
-        if (n == 0) return "0";
-        for(int i = 2; i <= n; i++) {
-            fractions.append(" + (1/").append(i).append(")");
-            if (i % 10 == 0) fractions.append("\n");
+    public static void printHarmonicSeriesFormula(int n) {
+        //StringBuilder fractions = new StringBuilder("1");
+        //
+        //if (n <= 0) {}
+        //else if (n == 1) System.out.println(fractions);
+        //else {
+        //    for(int i = 2; i <= n; i++) {
+        //        fractions.append(" + (1/").append(i).append(")");
+        //        if (i % 10 == 0) fractions.append("\n");
+        //    }
+        //    fractions.append(" = ").append(getHarmonicSeriesAt(n));
+        //    System.out.println(fractions);
+        //}
+
+        if (n <= 0) {}
+        else if (n == 1) System.out.println("1");
+        else {
+            System.out.print("1 ");
+            for (int i = 2; i <= n; i++) {
+                System.out.print("+ (1/"+ i + ") ");
+                if (i % 10 == 0) System.out.print("\n");
+            }
+            System.out.println("= " + getHarmonicSeriesAt(n));
         }
-        fractions.append(" = ").append(getHarmonicSeriesAt(n));
-        return fractions.toString();
     }
 
     public static void main(String[] args) {
-        System.out.println(printHarmonicSeriesFormula(35));
+            printHarmonicSeriesFormula(13);            
     }
 }
