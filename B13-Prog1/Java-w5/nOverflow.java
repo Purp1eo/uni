@@ -1,5 +1,5 @@
 public class nOverflow {
-    public static boolean inSafe(int a, int b, char operation) {
+    public static boolean isSafe(int a, int b, char operation) {
 
         long sum;
         if (operation == 'a') {
@@ -20,6 +20,6 @@ public class nOverflow {
     }
     
     public static void main(String[] args) {
-        System.out.println(inSafe(1000000000, -1200000000, 'a'));
+        System.out.println(isSafe(1000000000, -1200000000, 'a'));
     }
 }

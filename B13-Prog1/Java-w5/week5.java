@@ -4,7 +4,7 @@ public class week5 {
         else if (x > y) return 1;
         else return 0;
     }
-    public static boolean inSafe(int a, int b, char operation) {
+    public static boolean isSafe(int a, int b, char operation) {
         if (operation != 'a' && operation != 's' || ((long)java.lang.Math.abs(a) + (long)java.lang.Math.abs(b)) > Integer.MAX_VALUE) return false;
         return true;
     }
