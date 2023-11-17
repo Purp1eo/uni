@@ -15,22 +15,24 @@ public class Patient {
     public static Patient parseCSVLine(String line) {
         
         String csvFile = "C:/Users/aatan/OneDrive/Documents/latestdata.csv";
-        String attributeLine = "";
         String fileDelimiter = ",";
 
         Patient person = new Patient();
         
         try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
+            
+            String attributeLine;
+            br.readLine();
 
             while ((attributeLine = br.readLine()) != null) {
     
                 String[] attributes = attributeLine.split(fileDelimiter);
                 
-                String ageValue = attributes[1];
-                person.sex = attributes[2];
-                String dateOnset = attributes[11];
+                String ageValue = attributes[0];
+                person.sex = attributes[1];
+                String dateOnset = attributes[2];
 
-                if (ageValue == null) {
+                if (ageValue.equals("N/A")) {
                     person.fromAge = -1;
                     person.toAge = -1;
                 } else if (ageValue.contains("-")) {
@@ -42,7 +44,7 @@ public class Patient {
                     person.toAge = Integer.parseInt(ageValue);
                 }
 
-                String[] onsetDates = dateOnset.split(".");
+                String[] onsetDates = dateOnset.split("-");
                 person.day = Integer.parseInt(onsetDates[0]);
                 person.month = Integer.parseInt(onsetDates[1]);
                 person.year = Integer.parseInt(onsetDates[2]);
