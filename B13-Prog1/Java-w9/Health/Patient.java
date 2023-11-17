@@ -78,7 +78,6 @@ public class Patient {
     public int getYear() {
         return year;
     }
-
     public static void main(String[] args) {
         
     }
