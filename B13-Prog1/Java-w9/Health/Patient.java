@@ -52,7 +52,7 @@ public class Patient {
             e.printStackTrace();
         }
 
-        return null;
+        return person;
     }
 
     public int getFromAge() {
