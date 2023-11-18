@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class test {
     public static int[] monthlyInfections(PatientList pl, int fromYear, int toYear, int fromMonth, int toMonth) {
 
@@ -22,10 +19,6 @@ public class test {
         return infectionsPerMonth;
     }
     public static void main(String[] args) {
-        PatientList testSubjects = new PatientList();
 
-        testSubjects.addFromCSVFile("C:/Users/aatan/OneDrive/Documents/Berlin.csv");
-
-        System.out.println(testSubjects.getNumPatients());
     }
 }
