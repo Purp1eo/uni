@@ -22,8 +22,7 @@ public class PatientList {
             br.readLine();
 
             while ((line = br.readLine()) != null) {
-                Patient person = Patient.parseCSVLine(line);
-                addPatient(person);
+                addPatient(Patient.parseCSVLine(line));
             }
         } catch (IOException e) {
             e.printStackTrace();
