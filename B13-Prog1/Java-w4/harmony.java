@@ -63,3 +63,5 @@ public class harmony {
             printHarmonicSeriesFormula(15);
     }
 }
+
+// tying out intellij
