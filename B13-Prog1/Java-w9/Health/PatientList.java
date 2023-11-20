@@ -7,7 +7,7 @@ import java.util.List;
 public class PatientList {
 
     private List<Patient> patients;
-    
+
     PatientList() {
         patients = new ArrayList<>();
     }
@@ -34,7 +34,7 @@ public class PatientList {
     }
 
     public PatientList filterByFromAge(int minfromage, int maxfromage) {
-        
+
         PatientList filteredPatients = new PatientList();
         for (Patient person : patients) {
             if (person.getFromAge() > minfromage && person.getFromAge() < maxfromage) filteredPatients.addPatient(person);
@@ -49,7 +49,7 @@ public class PatientList {
         for (Patient person : patients) {
             if (person.getToAge() > mintoage && person.getToAge() < maxtoage) filteredPatients.addPatient(person);
         }
-        
+
         return filteredPatients;
     }
 
@@ -59,7 +59,7 @@ public class PatientList {
         for (Patient person : patients) {
             if (person.getSex().equals(sex)) filteredPatients.addPatient(person);
         }
-        
+
         return filteredPatients;
     }
 
@@ -69,7 +69,7 @@ public class PatientList {
         for (Patient person : patients) {
             if (person.getYear() == year) filteredPatients.addPatient(person);
         }
-        
+
         return filteredPatients;
     }
 
@@ -79,17 +79,7 @@ public class PatientList {
         for (Patient person : patients) {
             if (person.getMonth() == month) filteredPatients.addPatient(person);
         }
-        
-        return filteredPatients;
-    }
 
-    public PatientList filterByDay(int day) {
-
-        PatientList filteredPatients = new PatientList();
-        for (Patient person : patients) {
-            if (person.getDay() == day) filteredPatients.addPatient(person);
-        }
-        
         return filteredPatients;
     }
 }
