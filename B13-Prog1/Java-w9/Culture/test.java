@@ -10,8 +10,8 @@ public class test {
             int endMonth = (year == toYear) ? toMonth : 12;
 
             for (int month = startMonth; month <= endMonth; month++) {
-                SalesList filteredByYearAndMonth = pl.filterByYear(year).filterByMonth(month);
-                int sales = filteredByYearAndMonth.getNumSales();
+                ArtAuctionList filteredByYearAndMonth = pl.filterByYear(year).filterByMonth(month);
+                int sales = filteredByYearAndMonth.getTotalSales();
                 salesPerMonth[index++] = sales;
             }
         }

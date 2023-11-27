@@ -62,7 +62,7 @@ public class ArtAuctionList {
         return filteredAuctions;
     }
 
-    public ArtAuctionList filteredByYear(int year) {
+    public ArtAuctionList filterByYear(int year) {
 
         ArtAuctionList filteredAuctions = new ArtAuctionList();
         for (ArtAuction event : auctions) {
@@ -72,7 +72,7 @@ public class ArtAuctionList {
         return filteredAuctions;
     }
 
-    public ArtAuctionList filteredByMonth(int month) {
+    public ArtAuctionList filterByMonth(int month) {
 
         ArtAuctionList filteredAuctions = new ArtAuctionList();
         for (ArtAuction event : auctions) {
