@@ -26,7 +26,7 @@ public class Aufgabe7Gesundheit {
         double[] patientsAgeMetrics = new double[3];
         patientsAgeMetrics[0] = min;
         patientsAgeMetrics[1] = max;
-        patientsAgeMetrics[2] = Sum/patients.length;
+        patientsAgeMetrics[2] = Sum / (double)patients.length;
 
         return patientsAgeMetrics;
     }
@@ -142,6 +142,3 @@ public class Aufgabe7Gesundheit {
         System.out.println(Arrays.toString(showMetrics(people)));                           // tests if showMetrics (and filterByStatus, since it is used in showMetrics) work
     }
 }
-
-// Erwartete Ausgabe in Zeile 0:    Verstorben - Min: 23.120857139247363, Max: 73.6979197417159, Mean: 55.90020343719702, 
-// aber es kam zurück:              Verstorben - Min: 23.120857139247363, Max: 73.6979197417159, Mean: 84.92095858851228
