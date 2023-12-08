@@ -1,7 +1,3 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-
 public class test {
     public static int[] monthlyInfections(PatientList pl, int fromYear, int toYear, int fromMonth, int toMonth) {
 
@@ -23,16 +19,11 @@ public class test {
         return infectionsPerMonth;
     }
     public static void main(String[] args) {
-        String csvFile = "Berlin.csv";
-        String line = "";
-        String csvSplitBy = ",";
-    
-        try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
-            while ((line = br.readLine()) != null) {
-                String[] data = line.split(csvSplitBy);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+        PatientList pl = new PatientList();
+        pl.addFromCSVFile("C:/Users/aatan/OneDrive/Documents/uni/Additional-Files/Berlin.csv");
+        int[] infectionsPerMonth = monthlyInfections(pl, 2019, 2023, 5, 10);
+        for (int i = 0; i < infectionsPerMonth.length; i++) {
+            System.out.println(infectionsPerMonth[i]);
         }
     }
 }
