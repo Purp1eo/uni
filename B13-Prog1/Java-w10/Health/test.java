@@ -7,27 +7,25 @@ public class test {
         List<Integer> dailyInfectionsList = new ArrayList<>();
         
         int index = 0;
+
         for (int year = fromYear; year <= toYear; year++) {
             int startDay = (year == fromYear) ? fromDay : 1;
-            int endDay;
-            if (DateUtilities.isLeapYear(year)) {
-                endDay = (year == toYear) ? toDay : 366;
-            } else {
-                endDay = (year == toYear) ? toDay : 365;
-            }
-            
+            int endDay = (DateUtilities.isLeapYear(year)) ? (year == toYear) ? toDay : 366 : (year == toYear) ? toDay : 365;
+
             for (int day = startDay; day <= endDay; day++) {
                 PatientList filteredByYearAndDay = pl.filterByYear(year).filterByDayOfYear(day);
                 int infections = filteredByYearAndDay.getNumPatients();
+                
                 if (cumulative) {
                     if (index == 0) {
                         dailyInfectionsList.add(infections);
                     } else {
-                        dailyInfectionsList.add(dailyInfectionsList.get(index - 1) + infections);
+                        dailyInfectionsList.add(dailyInfectionsList.get(index) + infections);
                     }
                 } else {
                     dailyInfectionsList.add(infections);
                 }
+
                 index++;
             }
         }
@@ -43,8 +41,8 @@ public class test {
 
     public static void main(String[] args) {
         PatientList pl = new PatientList();
-        pl.addFromCSVFile("data/health.csv");
-        int[] dailyInfections = dailyInfections(pl, 2019, 2023, 29, 145, false);
+        pl.addFromCSVFile("C:/Users/aatan/OneDrive/Documents/uni/Additional-Files/Berlin.csv");
+        int[] dailyInfections = dailyInfections(pl, 2019, 2019, 333, 350, false);
         for (int i = 0; i < dailyInfections.length; i++) {
             System.out.println(dailyInfections[i]);
         }
