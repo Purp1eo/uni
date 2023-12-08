@@ -6,7 +6,7 @@ public class test {
         
         List<Integer> dailyInfectionsList = new ArrayList<>();
         
-        int index = 0;
+        int amount = 0;
 
         for (int year = fromYear; year <= toYear; year++) {
             int startDay = (year == fromYear) ? fromDay : 1;
@@ -17,16 +17,11 @@ public class test {
                 int infections = filteredByYearAndDay.getNumPatients();
                 
                 if (cumulative) {
-                    if (index == 0) {
-                        dailyInfectionsList.add(infections);
-                    } else {
-                        dailyInfectionsList.add(dailyInfectionsList.get(index) + infections);
-                    }
+                    amount += infections;
+                    dailyInfectionsList.add(amount);
                 } else {
                     dailyInfectionsList.add(infections);
                 }
-
-                index++;
             }
         }
 
@@ -35,14 +30,13 @@ public class test {
             dailyInfections[i] = dailyInfectionsList.get(i);
         }
 
-        
         return dailyInfections;
     }
 
     public static void main(String[] args) {
         PatientList pl = new PatientList();
         pl.addFromCSVFile("C:/Users/aatan/OneDrive/Documents/uni/Additional-Files/Berlin.csv");
-        int[] dailyInfections = dailyInfections(pl, 2019, 2019, 333, 350, false);
+        int[] dailyInfections = dailyInfections(pl, 2019, 2023, 333, 2, true);
         for (int i = 0; i < dailyInfections.length; i++) {
             System.out.println(dailyInfections[i]);
         }
