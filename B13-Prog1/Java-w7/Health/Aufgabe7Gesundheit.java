@@ -107,28 +107,22 @@ public class Aufgabe7Gesundheit {
         for (Patient element : deceasedPatients) {
             dSum += element.age;
         }
-
+        
         double[] recoveredPatientsMetrics = new double[3];
         recoveredPatientsMetrics[0] = recoveredPatients[0].age;
         recoveredPatientsMetrics[1] = recoveredPatients[recoveredPatients.length - 1].age;
-        recoveredPatientsMetrics[2] = rSum/recoveredPatients.length;
+        recoveredPatientsMetrics[2] = rSum / (double)recoveredPatients.length;
 
         double[] deceasedPatientsMetrics = new double[3];
         deceasedPatientsMetrics[0] = deceasedPatients[0].age;
         deceasedPatientsMetrics[1] = deceasedPatients[deceasedPatients.length - 1].age;
-        deceasedPatientsMetrics[2] = dSum/deceasedPatients.length;
+        deceasedPatientsMetrics[2] = dSum / (double)deceasedPatients.length;
 
-        String recMeanRound = String.format("%.2f", recoveredPatientsMetrics[2]);
-        String decMeanRound = String.format("%.2f", deceasedPatientsMetrics[2]);
+        String[] result = new String[2];
+        result[0] = "Verstorben - Min: " + deceasedPatientsMetrics[0] + ", Max: " + deceasedPatientsMetrics[1] + ", Mean: " + deceasedPatientsMetrics[2];
+        result[1] = "Genesen - Min: " + recoveredPatientsMetrics[0] + ", Max: " + recoveredPatientsMetrics[1] + ", Mean: " + recoveredPatientsMetrics[2];
 
-        String recoveredData = "Genesen - Min: " + (int)recoveredPatientsMetrics[0] + ", Max: " + (int)recoveredPatientsMetrics[1] + ", Mean: " + recMeanRound;
-        String deceasedData = "\nVerstorben - Min: " + (int)deceasedPatientsMetrics[0] + ", Max: " + (int)deceasedPatientsMetrics[1] + ", Mean: " + decMeanRound;
-
-        String[] patientsData = new String[2];
-        patientsData[0] = recoveredData;
-        patientsData[1] = deceasedData;
-        
-        return patientsData;
+        return result;
     }
 
     public static void main(String[] args) {
@@ -148,3 +142,6 @@ public class Aufgabe7Gesundheit {
         System.out.println(Arrays.toString(showMetrics(people)));                           // tests if showMetrics (and filterByStatus, since it is used in showMetrics) work
     }
 }
+
+// Erwartete Ausgabe in Zeile 0:    Verstorben - Min: 23.120857139247363, Max: 73.6979197417159, Mean: 55.90020343719702, 
+// aber es kam zurück:              Verstorben - Min: 23.120857139247363, Max: 73.6979197417159, Mean: 84.92095858851228
