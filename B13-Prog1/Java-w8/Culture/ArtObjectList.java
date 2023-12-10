@@ -5,7 +5,7 @@ public class ArtObjectList {
 
     private List<ArtObject> artObjects;
 
-    void addArtObject(ArtObject p) {
+    public void addArtObject(ArtObject p) {
         artObjects = new ArrayList<>();
     }
 
