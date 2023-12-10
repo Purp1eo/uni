@@ -9,11 +9,11 @@ public class PatientList {
         patients = new ArrayList<>();
     }
 
-    void addPatient(Patient p) {
+    public void addPatient(Patient p) {
         patients.add(p);
     }
 
-    int getNumPatients() {
+    public int getNumPatients() {
         return patients.size();
     }
 
