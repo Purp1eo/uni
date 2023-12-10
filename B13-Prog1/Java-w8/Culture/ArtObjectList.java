@@ -5,8 +5,12 @@ public class ArtObjectList {
 
     private List<ArtObject> artObjects;
 
-    public void addArtObject(ArtObject p) {
+    public ArtObjectList() {
         artObjects = new ArrayList<>();
+    }
+
+    public void addArtObject(ArtObject p) {
+        artObjects.add(p);
     }
 
     public int getNumArtObjects() {
