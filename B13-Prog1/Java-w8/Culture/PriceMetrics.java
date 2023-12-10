@@ -40,9 +40,7 @@ public class PriceMetrics {
     }
 
     public String toString() {
-        String avgPriceRounded = String.format("%.2f", avgPrice);
-
-        String metricString = "Min: " + (int)minPrice + ", Max: " + (int)maxPrice + ", Mean: " + avgPriceRounded;
+        String metricString = "Min: " + minPrice + ", Max: " + maxPrice + ", Mean: " + avgPrice;
         return metricString;
     }
 }
