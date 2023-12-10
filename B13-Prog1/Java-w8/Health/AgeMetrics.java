@@ -7,8 +7,8 @@ public class AgeMetrics {
     private int numAges;
 
     AgeMetrics() {        
-        minAge = 1.0;
-        maxAge = 1.0;
+        minAge = Double.POSITIVE_INFINITY;
+        maxAge = Double.NEGATIVE_INFINITY;
         sumAges = 0.0;
         avgAge = 0.0;
         numAges = 0;
@@ -40,9 +40,7 @@ public class AgeMetrics {
     }
 
     public String toString() {
-        String avgAgeRounded = String.format("%.2f", avgAge);
-
-        String metricString = "Min: " + (int)minAge + ", Max: " + (int)maxAge + ", Mean: " + avgAgeRounded;
+        String metricString = "Min: " + minAge + ", Max: " + maxAge + ", Mean: " + avgAge;
         return metricString;
     }
 }
