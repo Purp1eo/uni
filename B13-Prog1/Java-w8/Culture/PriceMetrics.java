@@ -7,8 +7,8 @@ public class PriceMetrics {
     private int numPrices;
     
     PriceMetrics() {
-        minPrice = 1.0;
-        maxPrice = 1.0;
+        minPrice = Double.POSITIVE_INFINITY;
+        maxPrice = Double.NEGATIVE_INFINITY;
         sumPrices = 0.0;
         avgPrice = 0.0;
         numPrices = 0;

@@ -3,7 +3,7 @@ public class ArtObject {
     private char status;
     private double price;
 
-    ArtObject(char status, double price) {
+    public ArtObject(char status, double price) {
         this.status = status;
         this.price = price;
     }

@@ -9,7 +9,7 @@ public class ArtObjectList {
         artObjects = new ArrayList<>();
     }
 
-    int getNumArtObjects() {
+    public int getNumArtObjects() {
         return artObjects.size();
     }
 
