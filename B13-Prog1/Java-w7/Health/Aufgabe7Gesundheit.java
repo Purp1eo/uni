@@ -34,7 +34,7 @@ public class Aufgabe7Gesundheit {
     // outputs a new Patient[] array patients containing a specific status
     public static Patient[] filterByStatus(Patient[] patients, char status) {
 
-        List<Patient>  patientStatusList = new ArrayList<>();
+        List<Patient> patientStatusList = new ArrayList<>();
         
         for (Patient element : patients) {
             if (element.status == status) {
