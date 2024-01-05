@@ -20,7 +20,7 @@ public class test {
     }
     public static void main(String[] args) {
         PatientList pl = new PatientList();
-        pl.addFromCSVFile("C:/Users/aatan/OneDrive/Documents/uni/Additional-Files/Berlin.csv");
+        pl.addFromCSVFile("C:/Users/aatan/OneDrive/Documents/uni/Java_w9/Health/Berlin.csv");
         int[] infectionsPerMonth = monthlyInfections(pl, 2019, 2023, 5, 10);
         for (int i = 0; i < infectionsPerMonth.length; i++) {
             System.out.println(infectionsPerMonth[i]);
