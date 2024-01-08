@@ -19,7 +19,6 @@ public class PatientList {
     public void addFromCSVFile(String filepath) {
         try (BufferedReader br = new BufferedReader(new FileReader(filepath))) {
             String line;
-            br.readLine();
 
             while ((line = br.readLine()) != null) {
                 addPatient(Patient.parseCSVLine(line));
