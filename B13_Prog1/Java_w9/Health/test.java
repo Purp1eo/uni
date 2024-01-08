@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class test {
     public static int[] monthlyInfections(PatientList pl, int fromYear, int toYear, int fromMonth, int toMonth) {
 
@@ -20,10 +22,13 @@ public class test {
     }
     public static void main(String[] args) {
         PatientList pl = new PatientList();
-        pl.addFromCSVFile("C:/Users/aatan/OneDrive/Documents/uni/Java_w9/Health/Berlin.csv");
+        pl.addFromCSVFile("C:/Users/aatan/OneDrive/Documents/uni/B13_Prog1/Java_w9/Health/Berlin.csv");
+/* 
         int[] infectionsPerMonth = monthlyInfections(pl, 2019, 2023, 5, 10);
         for (int i = 0; i < infectionsPerMonth.length; i++) {
             System.out.println(infectionsPerMonth[i]);
         }
+ */        
+        System.out.println(Arrays.toString(monthlyInfections(pl, 2019, 2020, 7, 11)));;
     }
 }
