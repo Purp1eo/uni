@@ -36,7 +36,7 @@ public class PatientList {
 
         PatientList filteredPatients = new PatientList();
         for (Patient person : patients) {
-            if (person.getFromAge() > minfromage && person.getFromAge() < maxfromage) filteredPatients.addPatient(person);
+            if (person.getFromAge() >= minfromage && person.getFromAge() <= maxfromage) filteredPatients.addPatient(person);
         }
 
         return filteredPatients;
@@ -46,7 +46,7 @@ public class PatientList {
 
         PatientList filteredPatients = new PatientList();
         for (Patient person : patients) {
-            if (person.getToAge() > mintoage && person.getToAge() < maxtoage) filteredPatients.addPatient(person);
+            if (person.getToAge() >= mintoage && person.getToAge() <= maxtoage) filteredPatients.addPatient(person);
         }
 
         return filteredPatients;
