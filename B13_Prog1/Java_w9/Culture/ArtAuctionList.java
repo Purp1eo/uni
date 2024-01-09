@@ -7,7 +7,7 @@ public class ArtAuctionList {
 
     private List<ArtAuction> auctions;
 
-    private ArtAuctionList() {
+    ArtAuctionList() {
         auctions = new ArrayList<>();
     }
 
@@ -46,7 +46,7 @@ public class ArtAuctionList {
 
         ArtAuctionList filteredAuctions = new ArtAuctionList();
         for (ArtAuction event : auctions) {
-            if (event.getLots() > minlots && event.getLots() < maxlots) filteredAuctions.addAuction(event);
+            if (event.getLots() >= minlots && event.getLots() <= maxlots) filteredAuctions.addAuction(event);
         }
 
         return filteredAuctions;
@@ -56,7 +56,7 @@ public class ArtAuctionList {
 
         ArtAuctionList filteredAuctions = new ArtAuctionList();
         for (ArtAuction event : auctions) {
-            if (event.getSale() > minsale && event.getSale() < maxsale) filteredAuctions.addAuction(event);
+            if (event.getSale() >= minsale && event.getSale() <= maxsale) filteredAuctions.addAuction(event);
         }
 
         return filteredAuctions;
