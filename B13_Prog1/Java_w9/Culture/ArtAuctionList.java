@@ -36,7 +36,7 @@ public class ArtAuctionList {
         double totalSales = 0;
 
         for (ArtAuction element : auctions) {
-            totalSales += element.getSale();
+            totalSales += (element.getSale() == -1) ? 0 : element.getSale();
         }
 
         return (int)totalSales;
