@@ -1,4 +1,4 @@
-pulbic class PopulationEntry {
+public class PopulationEntry {
     
     private String country;
     private int fromYear;
@@ -31,3 +31,4 @@ pulbic class PopulationEntry {
     public double getDeathRate() {
         return deathRate;
     }
+}
