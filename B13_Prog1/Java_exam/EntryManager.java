@@ -60,9 +60,9 @@ public class EntryManager {
         int year = Integer.parseInt(attributes[12]);
         double value = Double.parseDouble(attributes[13]);
 
-        HIVEntry hivd = new HIVEntry(measure, year, value);
+        HIVEntry HIVD = new HIVEntry(measure, year, value);
     
-        return hivd;
+        return HIVD;
     }
 
     public HIVEntry parseHIVPrevelance(String line) {
@@ -76,9 +76,9 @@ public class EntryManager {
         int year = Integer.parseInt(attributes[12]);
         double value = Double.parseDouble(attributes[13]);
 
-        HIVEntry hivp = new HIVEntry(measure, year, value);
+        HIVEntry HIVP = new HIVEntry(measure, year, value);
     
-        return hivp;
+        return HIVP;
     }
 
     public PopulationEntry getPopulationEntryForYear(int year) {
