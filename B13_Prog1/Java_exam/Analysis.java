@@ -71,6 +71,7 @@ public class Analysis {
         return PHIVDs;
     }
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     public void plotPercantageAnalysis(int fromYear, int toYear, boolean plotPrevalence, boolean plotCrudeDeathrate, String filename) {
 
         XYChart countryChart = new XYChart(1000, 500);
@@ -110,7 +111,7 @@ public class Analysis {
         String popFilepath = "D:\\Uni\\B13_Prog1\\Java_exam\\UN_popIndicators.csv";
         String HIVdataFilepath = "D:\\Uni\\B13_Prog1\\Java_exam\\GDBx_HIVdata.csv";
         
-        Analysis analysingAnalysis = new Analysis(popFilepath, HIVdataFilepath, "United States of America");
+        Analysis analysingAnalysis = new Analysis(popFilepath, HIVdataFilepath, "Greece");
         analysingAnalysis.plotPercantageAnalysis(1990, 2018, true, true, "myChart.png"); 
     }
 }
