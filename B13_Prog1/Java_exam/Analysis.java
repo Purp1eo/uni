@@ -74,7 +74,7 @@ public class Analysis {
     @SuppressWarnings({ "rawtypes", "unchecked" })
     public void plotPercantageAnalysis(int fromYear, int toYear, boolean plotPrevalence, boolean plotCrudeDeathrate, String filename) {
 
-        XYChart countryChart = new XYChart(800, 300);
+        XYChart countryChart = new XYChart(1000, 500);
         countryChart.setXAxisTitle("Year");        
         countryChart.setYAxisGroupTitle(0, "%");
         countryChart.setYAxisGroupTitle(1, "Prevalence");
@@ -111,8 +111,8 @@ public class Analysis {
         String popFilepath = "UN_popIndicators.csv";
         String HIVdataFilepath = "GDBx_HIVdata.csv";
         
-        new Analysis(popFilepath, HIVdataFilepath, "India").plotPercantageAnalysis(1990, 2018, true, false, "IndianChart");
-        new Analysis(popFilepath, HIVdataFilepath, "Germany").plotPercantageAnalysis(1990, 2018, true, false, "GermanyChart");
-        new Analysis(popFilepath, HIVdataFilepath, "Greece").plotPercantageAnalysis(1990, 2018, true, false, "GreeceChart");
+        new Analysis(popFilepath, HIVdataFilepath, "India").plotPercantageAnalysis(1990, 2018, true, true, "IndianChart");
+        new Analysis(popFilepath, HIVdataFilepath, "Germany").plotPercantageAnalysis(1990, 2018, true, true, "GermanyChart");
+        new Analysis(popFilepath, HIVdataFilepath, "Greece").plotPercantageAnalysis(1990, 2018, true, true, "GreeceChart");
     }
 }
