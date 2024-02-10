@@ -6,14 +6,14 @@ public class PopulationEntry {
     private double deathRate;
     
     public PopulationEntry(String country, int fromYear, int toYear, double deathRate) {
-        country = this.country;
-        fromYear = this.fromYear;
-        toYear = this.toYear;
-        deathRate = this.deathRate;
+        this.country = country;
+        this.fromYear = fromYear;
+        this.toYear = toYear;
+        this.deathRate = deathRate;
     }
 
     public boolean isValidForYear(int year) {
-        return (year <= fromYear && year > toYear);
+        return (year >= fromYear && year < toYear);
     }
 
     public String getCountry() {

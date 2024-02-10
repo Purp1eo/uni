@@ -5,9 +5,9 @@ public class HIVEntry {
     private double value;
 
     public HIVEntry(String measure, int year, double value) {
-        measure = this.measure;
-        year = this.year;
-        value = this.value;
+        this.measure = measure;
+        this.year = year;
+        this.value = value;
     }
 
     public String getMeasure() {
