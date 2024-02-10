@@ -114,5 +114,7 @@ public class Analysis {
         new Analysis(popFilepath, HIVdataFilepath, "India").plotPercantageAnalysis(1990, 2018, true, true, "IndianChart");
         new Analysis(popFilepath, HIVdataFilepath, "Germany").plotPercantageAnalysis(1990, 2018, true, true, "GermanyChart");
         new Analysis(popFilepath, HIVdataFilepath, "Greece").plotPercantageAnalysis(1990, 2018, true, true, "GreeceChart");
+        new Analysis(popFilepath, HIVdataFilepath, "Lesotho").plotPercantageAnalysis(1990, 2018, true, true, "LesothoChart");
+        new Analysis(popFilepath, HIVdataFilepath, "Iceland").plotPercantageAnalysis(1990, 2018, true, true, "IcelandChart");
     }
 }
